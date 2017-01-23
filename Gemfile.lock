@@ -77,6 +77,8 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.7.0)
+    faker (1.6.6)
+      i18n (~> 0.5)
     ffi (1.9.17)
     formatador (0.2.5)
     globalid (0.3.7)
@@ -242,6 +244,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   d3-rails (= 4.1.0)
   devise (~> 4.2.0)
+  faker
   guard (~> 2.14.0)
   guard-rspec (~> 4.7.2)
   jbuilder (~> 2.5)

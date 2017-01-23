@@ -40,6 +40,7 @@ gem 'devise', '~>4.2.0'
 gem 'jquery-ui-rails', '5.0.5'
 gem 'd3-rails', '4.1.0'
 gem 'will_paginate-bootstrap', '~> 1.0.1'
+gem 'faker', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

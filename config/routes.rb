@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
+  root "dashboards#index"
+
   devise_for :users, controllers: { registrations: 'registrations' }
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   resources :users do
     resources :exercises
   end
 
-  root "dashboards#index"
+  resources :dashboards, only: [:index] do
+    collection do
+      post :search, to: 'dashboards#search'
+    end
+  end
 end
