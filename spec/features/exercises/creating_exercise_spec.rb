@@ -14,7 +14,7 @@ RSpec.feature "Creating exercise" do
   scenario "with valid inputs" do
     visit "/"
 
-    click_link "My Dashboard"
+    click_link "My Locker Room"
     click_link "New Workout"
     expect(page).to have_link("Back")
 
@@ -31,7 +31,7 @@ RSpec.feature "Creating exercise" do
   scenario "with invalid inputs" do
     visit "/"
 
-    click_link "My Dashboard"
+    click_link "My Locker Room"
     click_link "New Workout"
     expect(page).to have_link("Back")
 

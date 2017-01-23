@@ -31,7 +31,7 @@ RSpec.feature "Listing Exercise" do
 
   scenario "shows user's workout for last 7 days" do
     visit "/"
-    click_link "My Dashboard"
+    click_link "My Locker Room"
 
     expect(page).to have_content(@e1.duration_in_min)
     expect(page).to have_content(@e1.workout)
@@ -50,7 +50,7 @@ RSpec.feature "Listing Exercise" do
     @jason.exercises.delete_all
 
     visit "/"
-    click_link "My Dashboard"
+    click_link "My Locker Room"
 
     expect(page).to have_content("No Workouts Yet")
   end
