@@ -4,14 +4,18 @@
 </div>
 
 <div class="row">
-  <div class="col-md-10">
+  <div class="col-md-12">
     <h2>List of Members</h2>
+    <%= will_paginate(
+        @athletes,
+        renderer: BootstrapPagination::Rails,
+        class: "pull-left paginate") %>
   </div>
 </div>
 
 <div class="row">
   <% @athletes.each do |athlete| %>
-      <div class="col-md-10 well member">
+      <div class="col-md-12 well member">
         <%= athlete.full_name %>
       </div>
   <% end %>
