@@ -4,6 +4,8 @@ RSpec.feature "Editing Exercise" do
   before do
     @owner = User.create(
       email: "owner@example.com",
+      first_name: "Admin",
+      last_name: "Owner",
       password: "password"
     )
 
