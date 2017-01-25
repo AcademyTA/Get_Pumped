@@ -27,6 +27,7 @@ RSpec.feature "Listing Exercise" do
       workout: "Weight lifting",
       workout_date: Date.today
     )
+
     @e3 = @jason.exercises.create(
       duration_in_min: 35,
       workout: "On treadmill",
@@ -63,6 +64,7 @@ RSpec.feature "Listing Exercise" do
 
     expect(page).to have_content("No Workouts Yet")
   end
+
   scenario "shows a list of user's friends" do
     visit "/"
     click_link "My Locker Room"
