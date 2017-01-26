@@ -14,6 +14,10 @@ RSpec.feature "Users signup" do
 
     expect(page).to have_content("You have signed up successfully.")
 
+    user = User.last
+    room = Room.last
+    expect(room.name).to eq('billy-cyrus')
+
     visit "/"
     expect(page).to have_content("Billy Cyrus")
   end

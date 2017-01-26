@@ -11,6 +11,8 @@ class User < ApplicationRecord
   has_many :friendships
   has_many :friends, through: :friendships, class_name: "User"
 
+  after_create :create_chatroom
+
   self.per_page = 10
 
   def full_name
@@ -37,5 +39,12 @@ class User < ApplicationRecord
 
   def current_friendship(friend)
     friendships.where(friend: friend).first
+  end
+
+  private
+
+  def create_chatroom
+     hyphenated_username = self.full_name.parameterize
+     Room.create(name: hyphenated_username, user_id: self.id)
   end
 end
